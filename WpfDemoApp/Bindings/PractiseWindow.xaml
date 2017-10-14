@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfDemoApp.Bindings.PractiseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDemoApp.Bindings"
+        mc:Ignorable="d"
+        Title="PractiseWindow" Height="500" Width="500">
+    <Grid Margin="0,0,0,-4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="152*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="83*"/>
+        </Grid.RowDefinitions>
+        <!--<Grid.Resources>-->
+        <!--<DataTemplate x:Key="PractiseTemplate">-->
+        <StackPanel Orientation="Horizontal" Grid.RowSpan="3">
+            <TextBlock Text="UserName" Height="25" Width="100" Margin="0,5,0,100"/>
+            <TextBox Text="" Height="25" Width="100" Margin="0,10,0,100"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="10,0,0,0" Grid.RowSpan="3">
+            <TextBlock Text="Age" Height="25" Width="100" Margin="0,5,0,10"/>
+            <TextBox Text="" Height="25" Width="100" Margin="0,5,0,10"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="-11,0,0,0" Grid.RowSpan="3">
+            <TextBlock Text="FavColor" Height="25" Width="100" Margin="10,70,5,0"/>
+            <TextBox Text="" Height="25" Width="100" Margin="0,70,5,0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.RowSpan="3">
+            <Button x:Name="Button1" Height="45" Width="100" Margin="50,200,5,0" Click="Button1_Click">AddUser
+            </Button>
+        </StackPanel>
+
+        <ListBox Grid.Row="2" Margin="46,82,346,59"/>
+        <ListBox Grid.Row="3" Margin="46,93,346,48"/>
+        <ListBox Grid.Row="4" Margin="46,193,346,-52"/>
+        <ListBox Grid.Row="5" Margin="121,193,271,-52"/>
+
+        <!--</DataTemplate>-->
+        <!--</Grid.Resources>-->
+    </Grid>
+</Window>

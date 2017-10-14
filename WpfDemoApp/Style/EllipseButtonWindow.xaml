@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfDemoApp.Style.EllipseButtonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDemoApp.Style"
+        mc:Ignorable="d"
+        Title="EllipseButtonWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.Resources>
+            <ControlTemplate TargetType="Button" x:Key="EllipseButton">
+                <Grid>
+                    <Ellipse x:Name="Ellipse" StrokeThickness="2"
+                         Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Fill="{TemplateBinding Background}">
+
+                        <Ellipse.Stroke>
+                            <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                                <GradientStop Color="Yellow" Offset="0"/>
+                                <GradientStop Color="Red" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Stroke>
+                    </Ellipse>
+                    
+                    <Ellipse Margin="10">
+                        <Ellipse.Fill>
+                            <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                                <GradientStop Color="Blue" Offset="0"/>
+                                <GradientStop Color="Green" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    
+                </Grid>
+            </ControlTemplate>
+
+        </Grid.Resources>
+                <Button x:Name="ClickMeButton" Content="Click Me!!!" Height="120" Width="120" Background="CornflowerBlue"/>
+
+    </Grid>
+</Window>
+
+    
+    
